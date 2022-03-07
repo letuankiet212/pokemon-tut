@@ -25,6 +25,7 @@
   "rules": {
     "prettier/prettier": "error",
     "react/prop-types": "off",
-    "space-before-function-paren": "off"
+    "space-before-function-paren": "off",
+    "@typescript-eslint/camelcase": "off"
   }
 }
