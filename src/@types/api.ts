@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 export type PokemonsResponseResult = {
   name: string
   url: string
@@ -13,5 +14,14 @@ export type PokemonsRes = {
 }
 
 export type PokemonRes = {
-  data: {}
+  data: {
+    name: string
+    sprites: {
+      other: {
+        dream_world: {
+          front_default: string
+        }
+      }
+    }
+  }
 }

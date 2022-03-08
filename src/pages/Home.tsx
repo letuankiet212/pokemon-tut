@@ -16,11 +16,13 @@ const Home: React.FC = () => {
   return (
     <div>
       <h1>Home</h1>
-      {pokemons.data?.data.results.map(
-        (pokemon: PokemonsResponseResult, index: number) => {
-          return <PokemonCard key={index} name={pokemon.name} />
-        }
-      )}
+      <div className="grid grid-cols-10 gap-1 px-1.5 ">
+        {pokemons.data?.data.results.map(
+          (pokemon: PokemonsResponseResult, index: number) => {
+            return <PokemonCard key={index} name={pokemon.name} />
+          }
+        )}
+      </div>
     </div>
   )
 }
