@@ -1,6 +1,7 @@
 import React from 'react'
 import { useQuery } from 'react-query'
 import { pokemonApi } from '../api'
+import { Link } from 'react-router-dom'
 
 type PokemonCardProps = {
   name: string
@@ -16,16 +17,19 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ name }) => {
 
   return (
     <>
-      <div>
-        <div className="text-center">{pokemon.data?.data.name}</div>
-        <div className="w-20 h-20 border-2 border-black rounded p-1 hover:bg-blue-400 transition-colors delay-75 cursor-pointer">
+      <Link
+        to={`/pokemon-detail/${name}`}
+        className="block flex items-center border-2 border-black rounded hover:bg-blue-400 hover:shadow  transition-colors delay-75 cursor-pointer"
+      >
+        <div className="p-1">
           <img
             src={pokemon.data?.data.sprites.other.dream_world.front_default}
             alt={'image' + name}
-            className="object-scale-down w-full h-full"
+            className="object-scale-down w-10 h-10"
           />
         </div>
-      </div>
+        <div className="text-center capitalize">{pokemon.data?.data.name}</div>
+      </Link>
     </>
   )
 }

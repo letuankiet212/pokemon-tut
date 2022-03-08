@@ -2,10 +2,10 @@
 import { PokemonRes, PokemonsRes } from '../@types/api'
 import client from './client'
 
-const getPokemons = async (): Promise<PokemonsRes> => client.get('/pokemon')
+const getAllPokemons = async (): Promise<PokemonsRes> => client.get('/pokemon?limit=200')
 const getPokemon = async (name:string): Promise<PokemonRes> => client.get(`/pokemon/${name}`)
 const pokemonApi = {
-  getPokemons, getPokemon
+  getAllPokemons, getPokemon
 }
 
 export default pokemonApi

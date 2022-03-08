@@ -5,8 +5,8 @@ import { pokemonApi } from '../api'
 import PokemonCard from '../components/PokemonCard'
 
 const Home: React.FC = () => {
-  const pokemons = useQuery('pokemons', () => {
-    return pokemonApi.getPokemons()
+  const pokemons = useQuery('all-pokemons', () => {
+    return pokemonApi.getAllPokemons()
   })
 
   if (pokemons.isLoading) {

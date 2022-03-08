@@ -25,3 +25,7 @@ export type PokemonRes = {
     }
   }
 }
+
+export type DetailPokemonRes = {
+  data: {}
+}

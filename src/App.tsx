@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from 'react-query'
 // pages
 import Home from './pages/Home'
+import PokemonDetail from './pages/PokemonDetail'
 
 //
 const queryClient = new QueryClient()
@@ -16,6 +17,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route
+            path="/pokemon-detail/:pokemon"
+            element={<PokemonDetail />}
+          ></Route>
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
