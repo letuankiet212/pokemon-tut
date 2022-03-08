@@ -11,3 +11,7 @@ export type PokemonsRes = {
     results: PokemonsResponseResult[]
   }
 }
+
+export type PokemonRes = {
+  data: {}
+}
