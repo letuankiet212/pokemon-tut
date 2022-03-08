@@ -1,7 +1,8 @@
 /* eslint-disable prettier/prettier */
+import { PokemonsRes } from '../@types/api'
 import client from './client'
 
-const getPokemons = async () => client.get('/pokemon')
+const getPokemons = async (): Promise<PokemonsRes> => client.get('/pokemon')
 
 const pokemonApi = {
   getPokemons
